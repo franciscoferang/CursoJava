@@ -7,6 +7,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Ejecuta 
@@ -14,7 +16,16 @@ public class Ejecuta
 public static void main(String []args)throws IOException{
 	
 	Provincia Sevilla = new Provincia("Sevilla", "41", "", true);
-	String texto = "pipeline{ agent any stages {stage('Tiempo'){steps{println(\"el tiempo para hoy es:\")println (\"";
+	List<String> texto = new ArrayList<String>();
+	texto.add("pipeline{");
+	texto.add("agent any");
+	texto.add("stages {");
+	texto.add("stage('Tiempo'){");
+	texto.add("steps{");
+	texto.add("println(\"el tiempo para hoy es:\")");
+	
+	
+	String tiempo = "";
 	
 		try{
 			URL url = new URL ("https://www.el-tiempo.net/api/json/v2/provincias/"
@@ -34,7 +45,7 @@ public static void main(String []args)throws IOException{
 				sc.close();
 				String[] a = informacionEnString.toString().split("today");
 				String[] b = a[1].split("\"");
-				texto = texto + Sevilla.getNombre()+" tiene un tiempo acutal: "+b[4];					
+				tiempo = Sevilla.getNombre()+" tiene un tiempo acutal: "+b[4];					
 			}
 			
 			
@@ -43,13 +54,14 @@ public static void main(String []args)throws IOException{
 		catch (MalformedURLException e) {
 			e.printStackTrace();
 		}	
-		
-		texto = texto + "\")}}}}";
+		texto.add("println (\""+tiempo+"\")");
+		texto.add("}");texto.add("}");
+		texto.add("}");texto.add("}");
 		System.out.println(texto);
 		 String nombreArchivo = "Jenkinsfile";
 	 	    try{
 	 	        Path archivo = Paths.get(nombreArchivo);
-	 	        Files.writeString(archivo,texto , StandardCharsets.UTF_8);    
+	 	        Files.write(archivo,texto , StandardCharsets.UTF_8);    
 	 	    }catch(IOException e) {
 	 	        System.out.println("Tuviste un error");
 	 	        e.printStackTrace();
