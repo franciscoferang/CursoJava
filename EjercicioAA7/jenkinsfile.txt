@@ -1,1 +1,0 @@
-pipeline{ agent any stages {stage('Tiempo'){steps{println("el tiempo para hoy es:")println ("Sevilla tiene un tiempo acutal: Cielos con intervalos de nubes altas, tendiendo a nubosos. Temperaturas en ascenso, localmente m\u00ednimas sin cambios. Vientos de componente sur.+ ")}}}}
