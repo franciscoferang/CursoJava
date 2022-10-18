@@ -1,4 +1,4 @@
-package ejercicio11;
+package ejercicioAA7;
 
 public class Provincia {
 

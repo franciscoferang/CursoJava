@@ -1,4 +1,4 @@
-package ejercicio11;
+package ejercicioAA7;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -44,9 +44,9 @@ public static void main(String []args)throws IOException{
 			e.printStackTrace();
 		}	
 		
+		texto = texto + "\")}}}}";
 		System.out.println(texto);
-		texto = texto + "+ \")}}}}";
-		 String nombreArchivo = "jenkinsfile.txt";
+		 String nombreArchivo = "Jenkinsfile";
 	 	    try{
 	 	        Path archivo = Paths.get(nombreArchivo);
 	 	        Files.writeString(archivo,texto , StandardCharsets.UTF_8);    
