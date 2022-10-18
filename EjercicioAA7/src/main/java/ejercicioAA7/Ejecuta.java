@@ -33,7 +33,7 @@ public static void main(String []args)throws IOException{
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET"); 
 			conn.connect(); 
-			int codigoRespuesta = conn.getResponseCode();										  //o no
+			int codigoRespuesta = conn.getResponseCode();
 			if (codigoRespuesta != 200){
 				throw new RuntimeException("Respuesta de error:" + codigoRespuesta);	
 			}else{		
