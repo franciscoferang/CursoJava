@@ -1,0 +1,1 @@
+{"Nombre":"Francisco","Edad":30,"Club de futbol":"Real Betis Balompie","Lenguaje de programación favorito":"Java","¿Mascotas?":"No","Estudios":"Ingeniería de software","Signo del zodiaco":"Virgo","¿Estudios?":"Si","Localidad":"Sevilla","Comida preferida":"Croquetas"}
