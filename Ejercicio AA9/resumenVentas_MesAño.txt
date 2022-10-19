@@ -1,0 +1,28 @@
+La aerolínea Iberia, con sede en Madrid, con su CEO: Francisco
+Dispone de los siguientes Vuelos:
+
+Destino: BARCELONA
+Cantidad de pasajes vendidos: 20000
+Vuelo: mañana
+Ganancia neta: 1000000
+Cantidad de pasajeros que asistieron al vuelo: 10000
+
+Destino: BERLIN
+Cantidad de pasajes vendidos: 6000
+Vuelo: mañana
+Ganancia neta: 300000
+Cantidad de pasajeros que asistieron al vuelo: 3000
+
+Destino: Buenos Aires
+Cantidad de pasajes vendidos: 5000
+Vuelo: mañana
+Ganancia neta: 250000
+Cantidad de pasajeros que asistieron al vuelo: 2500
+
+Destino: Madrid
+Cantidad de pasajes vendidos: 15000
+Vuelo: mañana
+Ganancia neta: 750000
+Cantidad de pasajeros que asistieron al vuelo: 7500
+
+Ganancia total: 4000000€
